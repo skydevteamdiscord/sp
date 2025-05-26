@@ -1,571 +1,325 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<!-- Mirrored from tanshcreative.com/waybinar-lp-preview/variations/home-01/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Dec 2024 05:29:44 GMT -->
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta content="telephone=no" name="format-detection"/>
-<title>SPIRITUAL BULLETIN : লাইভ ওয়েবিনার ১৫ ডিসেম্বর ২০২৪</title>
-<meta content="tansh" name="author"/>
-<meta content="HTML Landing Page Teamplate" name="description"/>
-<meta content="webinar, event, promotion, marketing, coach, feminine, agency, business, one page, landing page" name="keywords"/>
-<!-- FAVICON FILES -->
-<link href="assets/images/icons/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144"/>
-<link href="assets/images/icons/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120"/>
-<link href="assets/images/icons/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76"/>
-<link href="assets/images/icons/favicon.png" rel="shortcut icon"/>
-<!-- CSS FILES -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="assets/fonts/iconfonts.css" rel="stylesheet"/>
-<link href="assets/css/plugins.css" rel="stylesheet"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
-<link href="assets/css/responsive.css" rel="stylesheet"/>
-<link href="assets/css/color.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spiritual Bulletin Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <style>
-        #desktop-message {
-            background-color: yellow;
-            color: black;
-            padding: 10px;
-            text-align: center;
-            font-size: 18px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      background-attachment: fixed;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        @media (max-width: 1024px) {
-            #desktop-message {
-                display: none; /* Hide the message on mobile devices */
-            }
-        }
-    </style>
-<style>
-select {
-    background-color: #f4f4f4; /* Light gray background */
-    border: 1px solid #ccc;
-    color: #333;
-}
+    .soft-glow {
+      box-shadow: 0 0 15px rgba(220, 180, 255, 0.3), 0 0 30px rgba(220, 180, 255, 0.2);
+    }
+    .text-glow {
+      text-shadow: 0 0 8px rgba(220, 180, 255, 0.7), 0 0 12px rgba(220, 180, 255, 0.5);
+    }
 
-select option {
-    background-color: #e6e6e6; /* Slightly darker gray for options */
-    color: #000; /* Black text for better readability */
-}
-</style></head>
-<body>
-	<div id="desktop-message" style="display:none;">
-        <p>এই সাইটটি মোবাইল ব্যবহারকারীদের জন্য ডিজাইন করা হয়েছে। অনুগ্রহ করে মোবাইল ডিভাইসে প্রবেশ করুন, সেরা অভিজ্ঞতার জন্য।</p>
+    /* 3D Radio Container */
+    .radio-icon-container {
+      perspective: 800px;
+      width: 220px;
+      height: 160px;
+      margin: 2rem auto;
+    }
+
+    /* Main Radio Body */
+    .radio-body {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #FFD700 0%, #FF8C00 60%, #FFA500 100%);
+      border-radius: 25px;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2), inset 0 0 20px rgba(255,255,255,0.6);
+      transform-style: preserve-3d;
+      animation: float3d 6s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 15px;
+    }
+    .radio-body:hover {
+      transform: rotateX(10deg) rotateY(-10deg) translateZ(10px);
+    }
+    .radio-body.playing { /* Style for when radio is playing */
+        box-shadow: 0 15px 35px rgba(255,215,0,0.4), inset 0 0 25px rgba(255,255,255,0.7), 0 0 40px rgba(255,223,0,0.5);
+    }
+    @keyframes float3d {
+      0%,100% { transform: rotateX(0) rotateY(0) translateZ(0); }
+      50%    { transform: rotateX(15deg) rotateY(15deg) translateZ(20px); }
+    }
+
+    /* Dial */
+    .radio-dial {
+      width: 70px; height: 70px;
+      background: radial-gradient(circle at 30% 30%, #FFF 0%, #DDD 80%);
+      border-radius: 50%; border: 4px solid #FFF8DC;
+      box-shadow: 0 0 15px rgba(255,255,255,0.7), inset 0 0 10px rgba(0,0,0,0.3);
+      position: relative; transform: translateZ(30px);
+      /* animation: dial-spin 8s linear infinite; */ /* Paused by default */
+    }
+    .radio-body.playing .radio-dial {
+        animation: dial-spin 8s linear infinite; /* Play animation when playing */
+    }
+    @keyframes dial-spin {
+      0%{transform:translateZ(30px) rotate(0deg);} 100%{transform:translateZ(30px) rotate(360deg);}
+    }
+    .radio-dial::before {
+      content: '';
+      position: absolute;
+      width: 4px; height: 30px;
+      background-color: #333;
+      top: 5px; left: 50%;
+      transform-origin: bottom center;
+      transform: translateX(-50%) rotate(30deg) translateZ(10px);
+      border-radius: 2px;
+    }
+
+    /* Speaker Grill Bars */
+    .radio-speaker-grill {
+      width: 85%; height: 50px;
+      display: flex; flex-direction: column; justify-content: space-evenly;
+      transform: translateZ(20px);
+    }
+    .speaker-line {
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg, #FFF8DC, #FFE4B5);
+      border-radius: 2px; box-shadow: 0 0 5px rgba(255,255,255,0.5);
+    }
+
+    /* Soundwaves */
+    .soundwaves {
+      position: absolute; bottom: 25px; left: 50%;
+      transform: translateX(-50%);
+      width: 70%; height: 30px;
+      display: flex; justify-content: space-around; align-items: flex-end;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.3s ease;
+    }
+    .radio-body.playing .soundwaves {
+        opacity: 0.8; /* Show when playing */
+    }
+    .wave {
+      width: 6px; background-color: #FFD700; border-radius: 3px;
+      animation: soundwave 1s infinite ease-in-out;
+      box-shadow: 0 0 8px #FFD700;
+    }
+    .wave:nth-child(1){height:8px;animation-delay:0s;}
+    .wave:nth-child(2){height:16px;animation-delay:0.2s;}
+    .wave:nth-child(3){height:24px;animation-delay:0.4s;}
+    .wave:nth-child(4){height:16px;animation-delay:0.6s;}
+    .wave:nth-child(5){height:8px;animation-delay:0.8s;}
+    @keyframes soundwave {
+      0%,100%{transform:scaleY(0.4);opacity:0.6;}
+      50%{transform:scaleY(1.2);opacity:1;}
+    }
+    .radio-body:not(.playing) .wave {
+        animation-play-state: paused; /* Pause soundwave animation when not playing */
+    }
+
+
+    /* Particles */
+    .particles { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:-1; }
+    .particle { position:absolute; background-color:rgba(220,180,255,0.5); border-radius:50%; animation:float 20s infinite linear; opacity:0; }
+    @keyframes float { 0%{transform:translateY(0) translateX(0) scale(1);opacity:0;} 10%,90%{opacity:1;} 100%{transform:translateY(-100vh) translateX(calc(var(--x-end)*1px)) scale(0.5);opacity:0;} }
+
+    /* Buttons and Message Box Styles */
+    .play-button, .footer-button {
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .play-button:hover, .footer-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .play-button:active, .footer-button:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .message-box {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(40, 30, 70, 0.9);
+        color: #e0e0e0;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease, bottom 0.5s ease;
+    }
+    .message-box.show {
+        opacity: 1;
+        visibility: visible;
+        bottom: 80px; /* Adjust as needed based on footer height */
+    }
+    .hidden {
+        display: none !important;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <div class="particles" id="particle-container"></div>
+
+  <header class="sticky top-0 z-50 bg-opacity-70 backdrop-blur-md bg-[#1a163a] shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl md:text-2xl font-semibold text-glow">Spiritual Bulletin Digital</h1>
+      <div id="nowPlaying" class="text-sm md:text-base text-glow">Now Playing: Silence</div>
     </div>
- <script>
-        window.addEventListener('load', function() {
-            var width = window.innerWidth;
-            if (width > 1024) {
-                document.getElementById("desktop-message").style.display = "block";
-            }
-        });
-    </script>	
-<div id="dtr-wrapper" class="clearfix">
-<!-- preloader starts -->
-<div class="dtr-preloader">
-<div class="dtr-preloader-inner">
-<div class="dtr-loader">Loading...</div>
-</div>
-</div>
-<!-- preloader ends -->
-<!-- Small Devices Header
-============================================= -->
-<div class="dtr-responsive-header fixed-top">
-<div class="container">
-<div class="d-flex align-items-center justify-content-between">
-<!-- small devices logo -->
-<div class="dtr-responsive-header-left"> <a class="dtr-logo" href="index.html"><img alt="logo" src="assets/images/logo-light.png"/></a> </div>
-<!-- small devices logo ends -->
-<!-- contact info starts -->
-<div class="dtr-responsive-header-right ml-auto">
-<p class="text-size-md font-weight-medium line-height-null dtr-mb-0">SpritiualBulletin@gmail.com</p>
-<p class="dtr-mb-0">+91 94326 62655</p>
-</div>
-<!-- contact info ends -->
-</div>
-</div>
-</div>
-<!-- Small Devices Header ends
-============================================= -->
-<!-- header starts
-============================================= -->
-<header id="dtr-header-global" class="fixed-top">
-<div class="d-flex align-items-center justify-content-between">
-<!-- header left starts -->
-<div class="dtr-header-left">
-<!-- logo -->
-<a class="logo-default dtr-scroll-link" href="#home"><img alt="logo" src="assets/images/logo-light.png"/></a>
-<!-- logo on scroll -->
-<a class="logo-alt dtr-scroll-link" href="#home"><img alt="logo" src="assets/images/logo-light.png"/></a>
-<!-- logo on scroll ends -->
-</div>
-<!-- header left ends -->
-<!-- header right starts -->
-<div class="dtr-header-right ml-auto">
-<p class="text-size-md font-weight-medium line-height-null dtr-mb-0">SpiritualBulletin</p>
-<p class="dtr-mb-0">+91 94326 62655</p>
-</div>
-<!-- header right ends -->
-</div>
-</header>
-<!-- header ends
-================================================== -->
-<!-- == main content area starts == -->
-<div id="dtr-main-content">
-<!-- hero section starts
-================================================== -->
-<section class="dtr-section dtr-hero-section dtr-hero-section-top-padding" id="home">
-<!-- class - dtr-hero-section-bg - is for random background images to hero section -->
-<div class="dtr-hero-section-bg dtr-pb-100 dtr-mx-40 dtr-sm-mx-0">
-<div class="container">
-<!--===== row 1 starts =====-->
-<div class="row">
-<!-- column 1 starts -->
-<div class="col-12 col-md-9">
-<h1 class="dtr-xxl-heading"> <span style="color: #EEED0B">লাইভ ওয়েবিনার: <br/> </span>
-                                বেদান্ত বিজ্ঞান <br/>
-                                ও  <br/>
-                                আধ্যাত্মিকতা <br/> </h2>
-</div>
-<!-- column 1 ends -->
-<!-- column 2 starts -->
-<div class="col-12 col-md-3 mt-auto">
-<div class="dtr-icon-box bg-dark-semitrans">
-<div class="dtr-icon-box-icon"><i class="icon-calendar-alt"></i></div>
-<div class="dtr-icon-box-text"><span>১৫ ডিসেম্বর</span><span class="subtext">Sunday</span></div>
-</div>
-<div class="dtr-icon-box bg-dark-semitrans">
-<div class="dtr-icon-box-icon"><i class="icon-clock"></i></div>
-<div class="dtr-icon-box-text"><span>সময়: ঘোষণা করা হবে</span><span class="subtext">আপনাকে জানানো হবে</span></div>
-</div>
-</div>
-<!-- column 2 ends -->
-<!-- full width cta button -->
-<div class="col-12"> <a class="dtr-btn btn-cta w-100 btn-green dtr-mt-100 wow fadeInUp" data-wow-delay="0.2s" href="#contact-form">Register Now</a> </div>
-<!-- button ends -->
-<div class="dtr-countdown-wrapper">
-    <ul class="dtr-countdown countdown1">
-        <li class="count-item">
-            <span class="count-number days">08</span>
-            <p class="count-label">Days</p>
-        </li>
-        <li class="countdown-seperator">:</li>
-        <li class="count-item">
-            <span class="count-number hours">23</span>
-            <p class="count-label">Hours</p>
-        </li>
-        <li class="countdown-seperator">:</li>
-        <li class="count-item">
-            <span class="count-number minutes">55</span>
-            <p class="count-label">Minutes</p>
-        </li>
-        <li class="countdown-seperator">:</li>
-        <li class="count-item">
-            <span class="count-number seconds">00</span>
-            <p class="count-label">Seconds</p>
-        </li>
-    </ul>
-    <p class="text-uppercase">Days To Go</p>
-</div>
+  </header>
 
-<style>
-    .dtr-countdown-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent; /* Transparent background */
-        padding: 30px;
-        max-width: 450px;
-        margin: 0 auto;
-        font-family: 'Arial', sans-serif;
+  <main class="flex-grow flex flex-col items-center justify-center text-center p-4">
+    <div class="radio-icon-container">
+      <div id="radioBody" class="radio-body">
+        <div class="radio-dial"></div>
+        <div class="radio-speaker-grill">
+          <div class="speaker-line"></div>
+          <div class="speaker-line"></div>
+          <div class="speaker-line"></div>
+        </div>
+        <div class="soundwaves">
+          <div class="wave"></div><div class="wave"></div><div class="wave"></div><div class="wave"></div><div class="wave"></div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="localAudioPlayer" src="radio.mp3" loop></audio>
+
+    <button id="playButton" class="play-button mt-8 bg-gradient-to-br from-[#8A2BE2] to-[#4B0082] hover:from-[#9B30FF] hover:to-[#5D00A5] text-white font-semibold py-3 px-8 rounded-full text-lg md:text-xl shadow-xl focus:outline-none">
+      ▶️ Play Radio
+    </button>
+    <p id="statusMessage" class="mt-4 text-sm text-gray-400">Click Play to tune in.</p>
+  </main>
+
+  <footer class="sticky bottom-0 z-50 bg-opacity-70 backdrop-blur-md bg-[#1a163a] shadow-top-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-center items-center">
+      <button id="pauseButton" class="footer-button bg-transparent border border-purple-400 hover:bg-purple-700 text-purple-300 hover:text-white font-medium py-2 px-6 rounded-full focus:outline-none hidden">
+        ⏸️ Pause Radio
+      </button>
+      <p id="footerPlayMessage" class="text-purple-300 text-sm">Click Play to tune in</p>
+    </div>
+  </footer>
+
+  <div id="messageBox" class="message-box"></div>
+
+  <script>
+    const localAudioPlayer = document.getElementById('localAudioPlayer');
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+    const radioBody = document.getElementById('radioBody');
+    const statusMessage = document.getElementById('statusMessage');
+    const nowPlayingText = document.getElementById('nowPlaying');
+    const footerPlayMessage = document.getElementById('footerPlayMessage');
+    const messageBox = document.getElementById('messageBox');
+
+    // --- Make sure your audio file "mysong.mp3" is in the same folder as this HTML file ---
+    const audioFileName = "radio.mp3"; // You can change this if your file name is different
+
+    function showMessage(msg, duration = 3000) {
+      messageBox.textContent = msg;
+      messageBox.classList.add('show');
+      setTimeout(() => messageBox.classList.remove('show'), duration);
     }
 
-    .dtr-countdown {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .count-item {
-        text-align: center;
-        margin: 0 15px;
-        animation: fadeIn 1s ease-in-out forwards;
-    }
-
-    .count-number {
-        font-size: 60px; /* Larger size for better visibility */
-        font-weight: bold;
-        color: #3498db; /* Matching blue color */
-        display: block;
-        animation: fadeIn 2s ease-in-out forwards;
-    }
-
-    .count-label {
-        font-size: 16px;
-        color: #555;
-        text-transform: uppercase;
-        margin-top: 5px;
-    }
-
-    .countdown-seperator {
-        font-size: 50px;
-        color: #3498db; /* Matching blue color */
-        animation: fadeIn 2s ease-in-out forwards;
-    }
-
-    .text-uppercase {
-        font-size: 18px;
-        font-weight: bold;
-        color: #555;
-        margin-top: 20px;
-        animation: fadeIn 2s ease-in-out forwards;
-    }
-
-    /* Add responsiveness */
-    @media (max-width: 768px) {
-        .count-number {
-            font-size: 50px;
-        }
-        .count-label {
-            font-size: 14px;
-        }
-    }
-
-    /* Fade in animation for countdown elements */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Separate animation for countdown item separator */
-    .countdown-seperator {
-        animation-delay: 0.5s; /* Delay for the separator */
-    }
-
-    .count-number {
-        animation-delay: 1s; /* Delay for number */
-    }
-</style>
-
-
-<!--===== row 1 ends =====-->
-</div>
-</div>
-</section>
-<!-- hero section ends
-================================================== -->
-<!-- about section starts
-================================================== -->
-<section class="dtr-section dtr-pt-130">
-<div class="container">
-<!--===== row 1 starts =====-->
-<div class="row">
-<!-- heading starts -->
-<div class="col-12">
-<h2 class="dtr-xl-heading">ওয়েবিনার সম্পর্কে</h2>
-</div>
-<!-- heading ends -->
-<!-- column 1 starts -->
-<div class="col-12 col-md-8 offset-md-2">
-<p class="text-size-md dtr-mb-20">স্পিরিচুয়াল বুলেটিন চ্যানেলের পক্ষ থেকে আমরা আয়োজন করছি একটি বিশেষ লাইভ ওয়েবিনার, যেখানে আধ্যাত্মিকতা, জীবনের লক্ষ্য এবং ভগবানের সাথে সংযোগ স্থাপন নিয়ে আলোচনা করা হবে। এই ওয়েবিনারে অংশগ্রহণ করে আপনি পাবেন আপনার প্রশ্নগুলোর উত্তর এবং নিজেকে আধ্যাত্মিক দিক থেকে আরও সমৃদ্ধ করার সুযোগ।</p>
-</div>
-<!-- column 1 ends -->
-<!-- column 2 starts -->
-<div class="col-12 col-md-4 offset-md-2">
-<p>এই ওয়েবিনারে অংশগ্রহণ করতে আপনি আমাদের এই ফর্মটি পূরণ করুন এবং আপনার নাম রেজিস্টার করুন। এই ওয়েবিনার আধ্যাত্মিক অনুসন্ধিৎসুদের জন্য একটি বিশেষ সুযোগ। আসুন, একসাথে আধ্যাত্মিক যাত্রার পথে আরও এগিয়ে যাই।</p>
-<p>আমাদের সঙ্গে থাকুন, জানতে পারবেন আধ্যাত্মিকতা সম্পর্কে আরও অনেক কিছু।</p>
-</div>
-<!-- column 2 ends -->
-<!-- column 3 starts -->
-<div class="col-12 col-md-4">
- 
-</div>
-<!-- column 3 ends -->
-</div>
-<!--===== row 1 ends =====-->
-</div>
-</section>
-<!-- about section ends
-================================================== -->
-<!-- speakers section starts
-================================================== -->
-<section class="dtr-section dtr-mt-100 position-relative">
-<!-- vertical year -->
-<p class="dtr-big-outline-text big-text-color-dark">2024</p>
-<div class="container">
-<!-- heading -->
-<h2 class="dtr-xl-heading">The Speaker</h2>
-<!--===== row 1 starts =====-->
-<div class="row align-items-center">
-<!-- column 1 starts -->
-<div class="col-12 col-md-3 offset-md-2"> <img alt="image" src="assets/images/team-member-2.jpg"/> </div>
-<!-- column 1 ends -->
-<!-- column 2 starts -->
-<div class="col-12 col-md-7 small-device-space">
-<h2 class="dtr-mb-10">Pankaj Banerjee</h2>
-<p class="dtr-text-sep text-uppercase dtr-text-sep-light">spiritual motivational speaker</p>
-</div>
-<!-- column 2 ends -->
-</div>
-<!--===== row 1 ends =====-->
-<!--===== row 2 starts =====-->
-<div class="row align-items-center dtr-mt-50">
-<!-- column 1 starts -->
-<!-- column 1 ends -->
-<!-- column 2 starts -->
-<!-- column 2 ends -->
-</div>
-<!--===== row 2 ends =====-->
-</div>
-</section>
-<!-- speakers section ends
-================================================== -->
-<!-- contact section starts
-================================================== -->
-<section class="dtr-section position-relative dtr-py-100">
-<!-- countdown starts -->
-
-<!-- countdown ends -->
-<div class="container">
-<!--== row 1 starts ==-->
-<div class="row">
-<div class="col-12">
-<!-- video box starts -->
-<div class="dtr-video-box wow fadeInUp" data-wow-delay="0.2s">
-<!-- image -->
-<img alt="image" src="assets/images/video-bg1.jpg"/>
-<!-- pulsating button starts -->
-<div class="dtr-video-pulse-wrapper pulse-white color-white">
-<!-- video button -->
-<a class="dtr-video-popup dtr-video-button bg-blue" data-autoplay="true" data-vbtype="video" href="https://youtu.be/E28-dfOySx8"></a>
-<!-- video button ends -->
-<div class="dtr-video-pulse">
-<div class="pulse pulse-1"></div>
-<div class="pulse pulse-2"></div>
-<div class="pulse pulse-3"></div>
-</div>
-</div>
-<!-- pulsating button ends -->
-</div>
-<!-- video box ends -->
-</div>
-</div>
-<!--== row 1 ends ==-->
-<!--== row 2 starts ==-->
-<div class="row dtr-pt-100">
-<!-- heading -->
-<div class="col-12">
-<h2 class="dtr-xl-heading">Hurry Up! এখনই রেজিস্টার করুন</h2>
-</div>
-<!-- column 1 starts -->
-<div class="col-12 col-md-4 offset-md-2">
-<p class="text-size-lg">গুরুত্বপূর্ণ নির্দেশিকা:</p>
-<p>দয়া করে মনে রাখুন, আপনি এই ফর্মটি শুধুমাত্র একবার পূরণ করতে পারবেন। তাই ফর্মটি সাবমিট করার আগে আপনার প্রদত্ত সমস্ত তথ্য সঠিকভাবে যাচাই করে নিন। আপনার নাম, ইমেল, হোয়াটসঅ্যাপ নম্বর এবং অন্যান্য তথ্য সঠিকভাবে পূরণ করা অত্যন্ত গুরুত্বপূর্ণ, কারণ এই তথ্যের মাধ্যমে আমরা আপনাকে আমাদের ওয়েবিনারে যোগ দেওয়ার নির্দেশিকা পাঠাব। আপনার সঠিক এবং সম্পূর্ণ তথ্য নিশ্চিত করার জন্য আপনাকে ধন্যবাদ। সাবধানতার সাথে ফর্মটি পূরণ করুন এবং 'সাবমিট' বোতামে ক্লিক করুন।</p>
-<h6 class="text-uppercase font-weight-medium dtr-mt-50">Connect With Us</h6>
-<!-- social starts -->
-<div class="dtr-social-circle text-left dtr-social-light">
-<ul class="dtr-social dtr-social-list">
-<li><a class="dtr-twitter" href="https://www.youtube.com/@SpiritualBulletinStories" target="_blank" title="twitter"></a></li>
-<li><a class="dtr-facebook" href="https://www.facebook.com/SpiritualBulletin" target="_blank" title="facebook"></a></li>
-<li><a class="dtr-youtube" href="https://www.youtube.com/@SpiritualBulletin/videos" target="_blank" title="youtube"></a></li>
-<li><a class="dtr-google" href="https://www.youtube.com/@spiritualbulletinextras5741" target="_blank" title="google"></a></li>
-</ul>
-</div>
-<!-- social ends -->
-</div>
-<!-- column 1 ends -->
-<!-- column 2 starts -->
-<div class="col-12 col-md-4 small-device-space">
-<!-- form starts -->
-<div class="dtr-form dtr-form-dark-bg">
-<form id="contact-form">
-    <p class="dtr-form-field">
-        <label>আপনার নাম *</label>
-        <input name="name" type="text" placeholder="আপনার নাম" required>
-    </p>
-    <p class="dtr-form-field">
-        <label>হোয়াটসঅ্যাপ নম্বর *</label>
-        <input name="whatsapp" type="text" placeholder="হোয়াটসঅ্যাপ নম্বর" required>
-    </p>
-    <p class="dtr-form-field">
-        <label>ইমেল আইডি *</label>
-        <input name="email" type="email" placeholder="ইমেল আইডি" required>
-    </p>
-    <p class="dtr-form-field">
-        <label>আপনি কেন এই ওয়েবিনারে যোগ দিতে চান? *</label>
-        <textarea name="reason" placeholder="আপনার কারণ লিখুন" required></textarea>
-    </p>
-    <p class="dtr-form-field">
-        <label>আপনার কোনো প্রশ্ন থাকলে তা এখানে লিখুন:</label>
-        <textarea name="questions" placeholder="আপনার প্রশ্ন লিখুন"></textarea>
-    </p>
-    <p class="dtr-form-field">
-        <label>আপনি কতদিন ধরে আমাদের চ্যানেলের সাবস্ক্রাইবার? *</label>
-        <select name="subscription_duration" required>
-            <option value="less_than_1_month">১ মাসের কম</option>
-            <option value="1_to_6_months">১-৬ মাস</option>
-            <option value="more_than_6_months">৬ মাসের বেশি</option>
-        </select>
-    </p>
-    <p class="dtr-form-field">
-        <label>নিজের সম্পর্কে সংক্ষেপে কিছু লিখুন *</label>
-        <textarea name="about_you" placeholder="নিজের সম্পর্কে লিখুন" required></textarea>
-    </p>
-    <p class="dtr-form-field">
-        <label>আপনার বয়স কত? *</label>
-        <input name="age" type="number" placeholder="বয়স" required>
-    </p>
-    <p class="dtr-form-field">
-        <label>আপনি কি ভগবান বা ঈশ্বরে বিশ্বাস করেন? *</label>
-        <select name="belief" required>
-            <option value="yes">হ্যাঁ</option>
-            <option value="no">না</option>
-            <option value="not_sure">নিশ্চিত নই</option>
-        </select>
-    </p>
-    <p class="dtr-form-field">
-        <label>আমরা কিভাবে আপনার সাথে যোগাযোগ করব? *</label>
-        <select name="contact_method" required>
-            <option value="whatsapp">হোয়াটসঅ্যাপ</option>
-            <option value="email">ইমেল</option>
-        </select>
-    </p>
-    <p>
-        <button type="submit" class="dtr-btn w-100 btn-green">সাবমিট করুন</button>
-    </p>
-</form>
-
-<!-- Success message -->
-<div id="success-message" style="display: none; color: green; text-align: center; font-size: 20px;">
-    <p>ধন্যবাদ! আপনার ফর্ম সফলভাবে জমা দেওয়া হয়েছে।</p>
-</div>
-
-<script>
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
-        
-        // Create FormData object
-        var formData = new FormData(this);
-
-        // Make the POST request to Google Apps Script
-        fetch("https://script.google.com/macros/s/AKfycby7_6zXnqrFui_mlIBLesZZEP-xrtXP8XVIE_OLX7mkqBsTKGzEm3JPgHcsflAHxb3l/exec", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json()) // Parse JSON response
-        .then(data => {
-            if (data.result === "success") {
-                // Show success message
-                document.getElementById("success-message").style.display = "block";
-                // Optionally, you can hide the form or reset it
-                document.getElementById("contact-form").reset();
-            } else {
-                alert("There was an error submitting the form.");
-            }
+    playButton.addEventListener('click', () => {
+      localAudioPlayer.play()
+        .then(() => {
+          statusMessage.textContent = "Tuning in...";
         })
         .catch(error => {
-            alert("There was an error submitting the form.");
+          console.error("Error playing audio:", error);
+          statusMessage.textContent = "Error: Could not play audio.";
+          showMessage(`Error playing ${audioFileName}. Check console for details.`, 5000);
+          // Ensure UI is in a paused state if play fails
+          radioBody.classList.remove('playing');
+          playButton.classList.remove('hidden');
+          pauseButton.classList.add('hidden');
+          footerPlayMessage.classList.remove('hidden');
+          nowPlayingText.textContent = "Now Playing: Silence";
         });
     });
-</script>
 
+    pauseButton.addEventListener('click', () => {
+      localAudioPlayer.pause();
+    });
 
-<div>
-<!-- form ends -->
-<p class="text-size-xs dtr-mt-10">আমরা এই ওয়েবিনার এবং অন্যান্য তথ্য সম্পর্কে আপনাকে জানাব। আপনার তথ্য আমাদের গোপনীয়তা নীতিমালা অনুযায়ী সুরক্ষিত।</p>
-</div>
-<!-- column 2 ends -->
-</div>
-<!--== row 2 ends ==-->
-</div>
-</section>
-<!-- contact section ends
-================================================== -->
-</div>
-<!-- == main content area ends == -->
-<!-- footer section starts
-================================================== -->
-<footer id="dtr-footer">
-<!--== footer main starts ==-->
-<div class="dtr-footer-main">
-<div class="container">
-<!--== row starts ==-->
-<div class="row">
-<!-- column 1 starts -->
-<div class="col-12 col-md-6">
-<p>© 2024 SPIRITUAL BULLETIN. Website Deisgn By <a href="https://wa.me/919432662655?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services.
-	"> <span style="color: aqua"> SkyDigi </span></a></p>
-</div>
-<!-- column 1 ends -->
-<!-- column 2 starts -->
-<div class="col-12 col-md-6">
-<ul class="dtr-copyright-list">
-<li><a href="#">Terms</a></li>
-<li><a href="#">Privacy</a></li>
-<li><a href="#">Disclaimer</a></li>
-</ul>
-</div>
-<!-- column 2 ends -->
-</div>
-<!--== row ends ==-->
-</div>
-</div>
-<!--== footer main ends ==-->
-</footer>
-<!-- footer section ends
-================================================== -->
-</div>
-<!-- #dtr-wrapper ends -->
-<!-- JS FILES -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<!-- enable if using testimonial etc. Refer help doc for more info -->
-<!--<script src="assets/js/slick.min.js"></script> -->
-<script src="assets/js/custom.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    function countdownTimer() {
-        const countdownDate = new Date("December 14, 2024 00:00:00").getTime();
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
+    localAudioPlayer.addEventListener('play', () => {
+      radioBody.classList.add('playing');
+      playButton.classList.add('hidden');
+      pauseButton.classList.remove('hidden');
+      footerPlayMessage.classList.add('hidden');
+      statusMessage.textContent = "Tuned In. Enjoy the vibes!";
+      nowPlayingText.textContent = `Now Playing: ${audioFileName}`; // Display file name
+    });
 
-        if (distance < 0) {
-            document.querySelector('.dtr-countdown-wrapper').innerHTML = "<p>Event has started!</p>";
-            return;
-        }
+    localAudioPlayer.addEventListener('pause', () => {
+      radioBody.classList.remove('playing');
+      playButton.classList.remove('hidden');
+      pauseButton.classList.add('hidden');
+      footerPlayMessage.classList.remove('hidden');
+      statusMessage.textContent = "Paused. Click Play to resume.";
+      // Do not reset nowPlayingText here if you want it to show the paused track
+      // nowPlayingText.textContent = "Now Playing: Silence"; // Or keep the current track name
+    });
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    localAudioPlayer.addEventListener('ended', () => {
+      // Since 'loop' attribute is on the audio tag, this might not be hit often
+      // unless loop is removed or programmatically controlled.
+      radioBody.classList.remove('playing');
+      playButton.classList.remove('hidden');
+      pauseButton.classList.add('hidden');
+      footerPlayMessage.classList.remove('hidden');
+      statusMessage.textContent = "Song ended. Click play to restart (or will loop).";
+      nowPlayingText.textContent = "Now Playing: Silence";
+      showMessage("The song ended and will loop.", 5000);
+    });
 
-        document.querySelector('.count-number.days').textContent = days;
-        document.querySelector('.count-number.hours').textContent = hours;
-        document.querySelector('.count-number.minutes').textContent = minutes;
-        document.querySelector('.count-number.seconds').textContent = seconds;
+    localAudioPlayer.addEventListener('error', (e) => {
+      console.error("Audio Player Error:", e);
+      statusMessage.textContent = `Error loading ${audioFileName}.`;
+      showMessage(`Error: Could not load or play ${audioFileName}. Check if the file exists and is accessible.`, 7000);
+      radioBody.classList.remove('playing');
+      playButton.classList.remove('hidden');
+      pauseButton.classList.add('hidden');
+      footerPlayMessage.classList.remove('hidden');
+      nowPlayingText.textContent = "Now Playing: Error";
+    });
+
+    // Particle generation (unchanged)
+    const pc = document.getElementById('particle-container');
+    for(let i=0;i<30;i++){
+      const p=document.createElement('div');
+      p.className='particle';
+      const s=Math.random()*5+2;
+      p.style.width=p.style.height=`${s}px`;
+      p.style.left=`${Math.random()*100}%`;
+      p.style.top=`${Math.random()*100}%`;
+      p.style.setProperty('--x-end',Math.random()*200-100);
+      p.style.animationDuration=`${Math.random()*15+15}s`;
+      p.style.animationDelay=`${Math.random()*5}s`;
+      pc.appendChild(p);
     }
 
-    setInterval(countdownTimer, 1000);
-});
-</script>
-	
+    // Initial UI State
+    nowPlayingText.textContent = `Ready to play: ${audioFileName}`;
+    statusMessage.textContent = "Click Play to tune in.";
 
+  </script>
 </body>
 </html>
